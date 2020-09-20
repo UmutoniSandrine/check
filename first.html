@@ -1,0 +1,31 @@
+<form>
+  <h5>Brenda</h5><br>
+  MASS: <input type="number" name="bmass"><br>
+  HEIGHT: <input type="number" name="bheight"><br>
+  <h5>Tharicisse</h5><br>
+  Mass:<input type="number" name="tmass"><br>
+  Height:<input type="number" name="theight"><br>
+  <input type="button" value="Calculate" onclick="highmass()"><br>
+</form>
+<script>
+  
+  function highmass(){
+    var bm = parseInt(document.getElementsByName("bmass")[0].value);
+  var bh = parseInt(document.getElementsByName("bheight")[0].value);
+    var tm = parseInt(document.getElementsByName("tmass")[0].value);
+  var th= parseInt(document.getElementsByName("theight")[0].value);
+  bmiB = bm / bh * bh;
+  bmiT = tm /th * th;
+    if(bmiB > bmiT){
+      alert("BRENDA  BMI IS HIGH");
+    }else if(bmiB < bmiT){
+      alert("THARICISE  BMI IS HIGH");
+    }else{
+      alert("BOTH ARE EQUAL");
+      alert(bmiT);
+    }
+  }
+    
+  
+</script>
+
